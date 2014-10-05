@@ -1,0 +1,52 @@
+.bananaimg{
+width: 200px;
+height: 200px;
+}
+#StatsBar{
+width: 800px
+align: center
+}
+.stat{
+text-align: center
+margin-left: auto;
+margin-right: auto;
+color: #7A7A7A;
+}
+body{
+background-image: url('images/background.png');
+}
+
+#leftsidebar{
+float: left;
+}
+
+#rightsidebar{
+float: right;
+}
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #81B2C6;
+   padding: 5px 6px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 20px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #2d9c17;
+   background: #4D6B77;
+   color: #ffffff;
+   }
+.button:active {
+   border-top-color: #28f200;
+   background: #28f200;
+   }

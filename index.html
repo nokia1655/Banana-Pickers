@@ -1,0 +1,87 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"></link>
+</head>
+<body onload="starttimer()">
+<div id="leftsidebar">
+	<div id="BuyCLick" class="button" onclick="BanClicker()">
+		<h3>Buy Clicker - $50</h3>
+	</div>
+	<div id="BuyPick" class="button" onclick="BanPick()">
+		<h3>Buy Picker - $150</h3>
+	</div>
+	<div id="BuyFarm" class="button" onclick="Banfarm()">
+		<h3>Buy Farm - $500</h3>
+	</div>
+	<div id="BuyFact" class="button" onclick="BanFact()">
+		<h3>Buy Factory - $1000</h3>
+	</div>
+</div>
+
+<div id="rightsidebar">
+	<div id="UpCLick" class="button" onclick="UpClick()">
+		<h4 id="UpClickLabel"> 0/3 Upgrade Clicker - $250</h4>
+	</div>
+	<div id="UpPick" class="button" onclick="UpPick()">
+		<h4 id="UpPickLabel">0/5 Upgrade Picker - $500</h4>
+	</div>
+	<div id="UpFarm" class="button" onclick="Upfarm()">
+		<h4 id="UpFarmLabel">0/3 Upgrade Farm - $1000</h4>
+	</div>
+	<div id="UpFact" class="button" onclick="UpFact()">
+		<h4>0/5 Upgrade Factory - $5000</h4>
+	</div>
+	<div id="StatusBar"></div>
+</div>
+<center>
+	<div id="StatsBar">
+		<table>
+				<tbody>
+					<tr class="Stats">
+						<td>
+							<div>
+								<h4 class="Stat">Bananas Per Second:</h4>
+								<h4 id="BPSLabel" class="Stat"></h4>
+							</div>
+						</td>	
+						<td>
+							<div>
+								<h4 class="Stat">Clickers Owned:</h4>
+								<h4 id="ClickerLabel" class="Stat"></h4>
+							</div>
+						</td>
+						<td>
+							<div>
+								<h4 class="Stat">Pickers Owned:</h4>
+								<h4 id="PickerLabel" class="Stat"></h4>
+							</div>
+						</td>
+						<td>
+							<div>
+								<h4 class="Stat">Farms Owned:</h4>
+								<h4 id="FarmLabel" class="Stat"></h4>
+							</div>
+						</td>
+						<td>
+							<div>
+								<h4 class="Stat">Factories Owned:</h4>
+								<h4 id="FactLabel" class="Stat"></h4>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+		</table>
+	</div>
+	<div>
+		<img src="Banana-Single.png" class="bananaimg" onmousedown="BanCLICK()" id="BananaCLIC" />	
+	</div>
+	<p></p>
+	<h2 id="BananaTot">Bananas:0</h2>
+</center>
+<p></p>
+<p></p>
+<p></p>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
