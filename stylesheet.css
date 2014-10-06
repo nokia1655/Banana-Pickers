@@ -1,19 +1,16 @@
 .bananaimg{
-width: 250px;
-height: 250px;
-}
-#BananaTot{
-color: #D7D7D7;
+width: 200px;
+height: 200px;
 }
 #StatsBar{
 width: 800px
 align: center
 }
-.Stat{
-text-align: center;
+.stat{
+text-align: center
 margin-left: auto;
 margin-right: auto;
-color: #D7D7D7;
+color: #7A7A7A;
 }
 body{
 background-image: url('images/background.png');
@@ -51,5 +48,5 @@ float: right;
    }
 .button:active {
    border-top-color: #28f200;
-   background: #A7C9D7;
+   background: #28f200;
    }

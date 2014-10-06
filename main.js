@@ -1,8 +1,6 @@
 var TotalBan = 0;
 var bps = 0;
 
-var ClickPlus = 1
-
 var ClickersOwned = 0;
 var ClickerPrice = 50;
 var ClickerMultiplier = 1;
@@ -28,44 +26,34 @@ var Factup = 5000;
 var FactupStat = 0;
 
 function BanCLICK(){
-	TotalBan += ClickPlus;
+	TotalBan += 1;
 	refreshlabels();
 }
 
 function BanClicker(){
 	if (TotalBan >= ClickerPrice) {
 		TotalBan -= ClickerPrice;
-		ClickersOwned = ClickersOwned += 1;
+		FarmOwned = ClickersOwned += 1;
 		refreshlabels();
 		} else {
 		alert("You Don't have enough Money")
 	}
 }
 
-function UpClick(){
-	if (TotalBan >= Clickerup & ClickerupStat < 3) {
-		TotalBan -= Clickerup;
-		ClickerupStat += 1;
-		refreshlabels();
-		} else {
-		
-	}
-}
-
 function BanPick(){
 	if (TotalBan >= PickerPrice) {
 		TotalBan -= PickerPrice;
-		PickerOwned = PickerOwned += 1;
+		FarmOwned = PickerOwned += 1;
 		refreshlabels();
 		} else {
 		
 	}
 }
 
-function UpPick(){
-	if (TotalBan >= Pickerup & PickerupStat < 5) {
-		TotalBan -= Pickerup;
-		PickerupStat += 1;
+function UpClick(){
+	if (TotalBan >= Clickerup) {
+		TotalBan -= Clickerup;
+		ClickerupStat += 1;
 		refreshlabels();
 		} else {
 		
@@ -82,35 +70,16 @@ function Banfarm(){
 	}
 }
 
-function Upfarm(){
-	if (TotalBan >= Farmup & FarmupStat < 3) {
-		TotalBan -= Farmup;
-		FarmupStat += 1;
-		refreshlabels();
-		} else {
-		
-	}
-}
-
 function BanFact(){
 	if (TotalBan >= FactPrice) {
 		TotalBan -= FactPrice;
-		FactOwned = FactOwned += 1;
+		FarmOwned = FactOwned += 1;
 		refreshlabels();
 		} else {
 		
 	}
 }
 
-function UpFact(){
-	if (TotalBan >= Factup & FactupStat < 3) {
-		TotalBan -= Factup;
-		FarmupStat += 1;
-		refreshlabels();
-		} else {
-		
-	}
-}
 
 function starttimer(){
 	setInterval(function() {
@@ -127,15 +96,14 @@ bps = (ClickersOwned * ClickerMultiplier) + (FarmOwned * FarmMultiplier) + (Pick
 
 function refreshlabels() {
 document.getElementById("BananaTot").innerHTML = "Bananas: " + TotalBan;
-document.getElementById("ClickerLabel").innerHTML = ClickersOwned;
 document.getElementById("FarmLabel").innerHTML = FarmOwned;
 document.getElementById("FactLabel").innerHTML = FactOwned;
 document.getElementById("PickerLabel").innerHTML = PickerOwned;
-document.getElementById("UpClickLabel").innerHTML = ClickerupStat + "/3 Upgrade Clicker - $" + Clickerup;
-document.getElementById("UpClickLabel").innerHTML = PickerupStat + "/5 Upgrade Picker - $" + Pickerup;
-document.getElementById("UpClickLabel").innerHTML = FarmupStat + "/3 Upgrade Farm - $" + Farmup;
-document.getElementById("UpClickLabel").innerHTML = FactupStat + "/5 Upgrade Factory - $" + Factup;
+document.getElementById("ClickerLabel").innerHTML = ClickersOwned;
 document.getElementById("BananaTot").innerHTML = "Bananas: " + TotalBan;
 document.getElementById("BPSLabel").innerHTML = bps
 }
 
+function checkbps() {
+bps = (ClickersOwned * ClickerMultiplier) + (FarmOwned * FarmMultiplier) + (PickerOwned * PickerMultiplier) + (FactOwned * FactMultiplier);
+}
